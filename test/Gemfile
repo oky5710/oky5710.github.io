@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "https://oky5710.github.io"
 
 # use local theme gem for testing
 gem "minimal-mistakes-jekyll", path: "../"
