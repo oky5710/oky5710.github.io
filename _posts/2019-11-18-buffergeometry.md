@@ -33,11 +33,11 @@ last_modified_at:
  -  요소를 나눠서 그린다: 6만개를 한번에 만들지 않고 나눠서 그리면 한번에 buffer memory가 overflow되지 않을 것같다.
  
  - **shader를 다시 짠다.**
-- 현재 하나의 shader를 두가지의 buffer memory에 나눠 쓰고 있었는데 이것을 분리 한다.
-- 분리하는 효과 : 연산 횟수를 줄인다.
-- 현재는 position(4), opacity(1), color(3), size(1)를 넘기는데 * 괄호 안 숫자는 1개 점당 넘기는 데이터 수
-- 1번 bufferGeometry는 position, color, size만 사용하므로 opacity는 모든 점이 동일하고 다른 bufferGeometry는 size를 사용하지 않아서 두개의 shader를 만들어서 각각 필요한 속성값만 전달하기로하였다.
-- 디자인이 변경될 여지가 있기 때문에 모두 수정되게 남겨 놓는게 놓을 것 같다고 초반에 판단 했었다.
+    - 현재 하나의 shader를 두가지의 buffer memory에 나눠 쓰고 있었는데 이것을 분리 한다.
+    - 분리하는 효과 : 연산 횟수를 줄인다.
+    - 현재는 position(4), opacity(1), color(3), size(1)를 넘기는데 * 괄호 안 숫자는 1개 점당 넘기는 데이터 수
+    - 1번 bufferGeometry는 position, color, size만 사용하므로 opacity는 모든 점이 동일하고 다른 bufferGeometry는 size를 사용하지 않아서 두개의 shader를 만들어서 각각 필요한 속성값만 전달하기로하였다.
+    - 디자인이 변경될 여지가 있기 때문에 모든 옵션이 수정되게 남겨 놓는게 좋을 것 같다고 초반에 판단 했었다.
 
 **결론**
 --
